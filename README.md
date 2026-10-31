@@ -1,4 +1,4 @@
-# Личный сайт Артёма Артемьева
+# Личный сайт Артема Артемьева
 
 Адрес: https://artem-artemev.ru/
 Портфолио сайтов: https://artem-artemev.ru/sites.html
