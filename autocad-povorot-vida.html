@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113706061', 'ym');
+
+    ym(113706061, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<!-- /Yandex.Metrika counter -->
+  <meta charset="utf-8">
+  <meta name="yandex-verification" content="03379ed4613f56b8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#141714">
+  <title>Как повернуть вид в видовом экране AutoCAD: топооснова без изменений</title>
+  <meta name="description" content="Как повернуть топооснову на листе AutoCAD с помощью VPROTATEASSOC и команды ПОВЕРНУТЬ. Как развернуть вид внутри неподвижной рамки через MVSETUP.">
+  <link rel="canonical" href="https://artem-artemev.ru/autocad-povorot-vida.html">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css?v=20261117-diary">
+  <link rel="stylesheet" href="articles.css">
+</head>
+<body>
+<noscript><div><img src="https://mc.yandex.ru/watch/113706061" style="position:absolute;left:-9999px" alt=""></div></noscript>
+<a class="skip" href="#main">К содержимому</a>
+<header class="header wrap"><a class="brand" href="/" aria-label="Артем Артемьев — главная">АА<span>↗</span></a><nav aria-label="Главная навигация"><a href="/">Главная</a><a href="sites.html">Сайты</a><a href="engineering.html">Объекты</a><a href="/#projects">Приложения</a><a href="articles.html">Мои статьи</a><a href="/#contact">Контакты ↗</a></nav><span class="location"><i></i> Иркутск · Байкал · Мир</span></header>
+<main id="main" class="reading wrap">
+<a class="back" href="articles.html">← Мои статьи</a>
+<article><p class="byline">AutoCAD · Артем Артемьев · 17 ноября 2026</p>
+<h1>Как повернуть вид в видовом экране AutoCAD, сохранив координаты топоосновы</h1>
+<p>Допустим, трасса водопровода идёт по диагонали, а на листе её удобнее показать вдоль длинной стороны. Геодезические координаты нужны для привязки сети, поэтому топооснову в модели оставь на месте. Способ поворота зависит от того, как ты оформляешь лист.</p>
+<h2>Если рамку можно повернуть вместе с планом</h2>
+<ol>
+<li>Открой нужный лист. Если работаешь внутри видового экрана, дважды щёлкни за его границей. Теперь можно выбрать саму рамку.</li>
+<li>Введи <code>VPROTATEASSOC</code>, нажми Enter, введи <code>1</code> и снова нажми Enter. При таком значении вид поворачивается вместе с рамкой.</li>
+<li>Введи <code>_ROTATE</code> (команда «Повернуть»), щёлкни по границе видового экрана и нажми Enter. Укажи базовую точку на листе. Например, если один угол рамки должен остаться на месте, щёлкни по этому углу.</li>
+<li>Введи угол. При стандартных настройках <code>90</code> означает четверть оборота против часовой стрелки, <code>-90</code> — по часовой.</li>
+</ol>
+<p>Проверь, помещается ли повёрнутая рамка в область печати. На вкладке «Модель» трасса и топооснова сохранят исходные координаты.</p>
+<h2>Если рамка должна остаться на месте</h2>
+<p>Когда лист уже скомпонован, удобнее развернуть только изображение внутри рамки. В полной версии AutoCAD для этого есть <code>_MVSETUP</code>.</p>
+<ol>
+<li>На листе введи <code>_MVSETUP</code>. Выбери <code>_Align</code>, затем <code>_Rotate</code>.</li>
+<li>Если на листе несколько видовых экранов, щёлкни внутри нужного. Укажи базовую точку и угол поворота.</li>
+</ol>
+<p>Рамка сохранит положение на листе. В AutoCAD LT команда <code>MVSETUP</code> недоступна.</p>
+<h2>Что проверить, если результат другой</h2>
+<p><strong>Повернулась только рамка.</strong> Отмени поворот и проверь значение <code>VPROTATEASSOC</code>. При нуле изображение сохраняет прежнюю ориентацию. Поставь единицу и повтори поворот.</p>
+<p><strong>Сместились объекты на вкладке «Модель».</strong> Сразу отмени операцию. Такое бывает, если запустить «Повернуть» внутри активного видового экрана и выбрать линии чертежа. Вернись в пространство листа и выбери рамку.</p>
+<p class="refs">Справка Autodesk: <a href="https://help.autodesk.com/cloudhelp/2022/ENU/AutoCAD-LT/files/GUID-D077CEA3-6EC1-4677-BD4B-372D7364D545.htm">поворот видового экрана</a> и <a href="https://help.autodesk.com/cloudhelp/2022/ENU/AutoCAD-Core/files/GUID-0E596DD0-5F64-4408-AEB7-1C7DCB4874D3.htm">поворот вида через MVSETUP</a>.</p></article>
+</main>
+<footer class="wrap"><span>Артем Артемьев</span><a href="/">На главную ↗</a></footer>
+</body></html>

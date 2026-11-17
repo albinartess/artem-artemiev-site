@@ -1,0 +1,13 @@
+.reading { max-width: 54rem; padding-block: clamp(2rem,6vw,5rem); }
+.reading h1 { font: 500 clamp(2.2rem,5vw,4.2rem)/1.08 Georgia,serif; letter-spacing: -.035em; margin: 1rem 0 2rem; }
+.reading h2 { font: 500 clamp(1.55rem,3vw,2.3rem)/1.2 Georgia,serif; margin: 2.2rem 0 .8rem; }
+.reading p, .reading li { font-size: clamp(1rem,1.6vw,1.15rem); line-height: 1.65; max-width: 70ch; }
+.reading p, .reading li + li { margin-block: .8rem; }
+.reading ol { padding-left: 1.65rem; }
+.reading li::marker, .reading a { color: var(--lime); }
+.reading a { text-decoration: underline; text-underline-offset: .18em; }
+.reading code { font-size: .93em; background: #272c26; padding: .05em .24em; border-radius: .2em; }
+.reading .byline, .reading .refs { font-size: .9rem; color: var(--muted); }
+.reading .byline { margin-top: 2rem; }
+.reading .refs, .entry { margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.entry h2 { margin-top: .5rem; }
