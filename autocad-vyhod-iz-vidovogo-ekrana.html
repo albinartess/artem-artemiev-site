@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113706061', 'ym');
+
+    ym(113706061, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<!-- /Yandex.Metrika counter -->
+  <meta charset="utf-8">
+  <meta name="yandex-verification" content="03379ed4613f56b8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#141714">
+  <title>Как выйти из видового экрана на листе в AutoCAD: команды PSPACE и VPMIN</title>
+  <meta name="description" content="Как выйти из видового экрана AutoCAD и выбрать рамку на листе. Три способа переключения и команда VPMIN для развёрнутого видового экрана.">
+  <link rel="canonical" href="https://artem-artemev.ru/autocad-vyhod-iz-vidovogo-ekrana.html">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css?v=20261117-diary">
+  <link rel="stylesheet" href="articles.css?v=plan">
+</head>
+<body>
+<noscript><div><img src="https://mc.yandex.ru/watch/113706061" style="position:absolute;left:-9999px" alt=""></div></noscript>
+<a class="skip" href="#main">К содержимому</a>
+<header class="header wrap"><a class="brand" href="/" aria-label="Артем Артемьев — главная">АА<span>↗</span></a><nav aria-label="Главная навигация"><a href="/">Главная</a><a href="sites.html">Сайты</a><a href="engineering.html">Объекты</a><a href="/#projects">Приложения</a><a href="articles.html">Мои статьи</a><a href="/#contact">Контакты ↗</a></nav><span class="location"><i></i> Иркутск · Байкал · Мир</span></header>
+<main id="main" class="reading wrap">
+<a class="back" href="articles.html">← Мои статьи</a>
+<article><p class="byline">AutoCAD · Артем Артемьев · 17 ноября 2026</p>
+<h1>Как выйти из видового экрана на листе в AutoCAD</h1>
+<p>Хочешь передвинуть рамку на листе, а щелчком выбирается линия чертежа внутри неё? Ты работаешь с моделью через видовой экран. Чтобы снова выбирать объекты листа, нажми Esc, введи <code>_PSPACE</code> и нажми Enter. В строке состояния появится «ЛИСТ».</p>
+<h2>Три способа вернуться на лист</h2>
+<ul>
+<li><strong>Через командную строку.</strong> Используй <code>_PSPACE</code>, если край рамки ушёл за границу окна и щёлкнуть снаружи негде. Команда работает на вкладке листа. Подчёркивание позволяет ввести английское имя команды в русской версии AutoCAD.</li>
+<li><strong>Мышью.</strong> Если видишь свободное место на листе, дважды щёлкни за пределами всех видовых экранов. Двойной щелчок внутри соседней рамки активирует её.</li>
+<li><strong>В строке состояния.</strong> На вкладке листа нажми «МОДЕЛЬ» внизу окна. Когда надпись сменится на «ЛИСТ», щёлкни один раз по контуру видового экрана — выделится сама рамка.</li>
+</ul>
+<h2>Если видовой экран развёрнут на всё окно</h2>
+<p>Если ты разворачивал экран командой <code>_VPMAX</code> или кнопкой развёртывания, введи <code>_VPMIN</code> и нажми Enter. AutoCAD восстановит положение вида и масштаб, которые были до развёртывания. Проверь переключатель внизу окна. Если он показывает «МОДЕЛЬ», введи <code>_PSPACE</code>.</p>
+<h2>Если открыта вкладка «Модель»</h2>
+<p>Посмотри на вкладки внизу области чертежа. Если выбрана «Модель», открой нужный лист, например «Лист1». Команда <code>_PSPACE</code> переключает пространство внутри уже открытого листа. Выбрать другой лист с её помощью нельзя.</p>
+<h2>Как теперь повернуть рамку с видом</h2>
+<p>В пространстве листа можно выбрать рамку и передвинуть её. Если нужно ещё и развернуть план, задай <code>VPROTATEASSOC</code> значение <code>1</code> и поверни рамку. Вместе с ней развернётся вид, а координаты объектов в модели сохранятся. <a href="autocad-povorot-vida.html">Инструкция с примером генплана до и после поворота</a>.</p>
+<p class="refs">Справка Autodesk: <a href="https://help.autodesk.com/cloudhelp/2023/ENU/AutoCAD-Core/files/GUID-38E17265-2CF0-4A9F-8DF5-BC6A317C3683.htm">команда PSPACE</a>, <a href="https://help.autodesk.com/cloudhelp/2022/ENU/AutoCAD-Core/files/GUID-C5BB2604-AD99-4F0C-BEFB-DA77C7D036A3.htm">переключатель пространства</a>, <a href="https://help.autodesk.com/cloudhelp/2020/ENU/AutoCAD-Core/files/GUID-635B538B-DD2F-492D-BE6B-268CCFA9BACC.htm">развёртывание и восстановление видового экрана</a>.</p></article>
+</main>
+<footer class="wrap"><span>Артем Артемьев</span><a href="/">На главную ↗</a></footer>
+</body></html>
